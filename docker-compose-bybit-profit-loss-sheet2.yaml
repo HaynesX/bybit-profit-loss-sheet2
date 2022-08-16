@@ -1,6 +1,6 @@
 version: '3'
 services:
-  bybit-profit-loss:
+  bybit-profit-loss-sheet2:
     image: haynesx12/bybit-profit-loss-sheet2:${TAG}
     container_name: bybit-profit-loss-sheet2
     command: >
