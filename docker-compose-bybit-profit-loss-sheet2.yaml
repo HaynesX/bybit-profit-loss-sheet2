@@ -1,0 +1,18 @@
+version: '3'
+services:
+  bybit-profit-loss:
+    image: haynesx12/bybit-profit-loss-sheet2:${TAG}
+    container_name: bybit-profit-loss-sheet2
+    command: >
+      sh -c "
+      python -u main.py"
+    ports:
+      - 8002:8002
+    expose:
+      - 8002
+    env_file:
+      - ../env/bybit-profit-loss-sheet2.env
+    volumes:
+      - ../bybit-profit-loss-sheet2-data:/home/bybit-profit-loss-sheet2/pnlData/
+
+
